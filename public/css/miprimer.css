@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    min-height: 100%;
+    position: relative;
+  }
+
+
+header, nav, footer{
+    display: block;
+    
+}
+
+header{
+    background: rgba(255.255.255, .0.8);
+}
+
+
+header h1{
+    text-align: center;
+    color: white;
+    font: bold 20px verdana;
+   
+}
+
+.barranav{
+ background:#0984e3;
+ 
+ 
+}
+
+h4{
+    font: bold 15px verdana;
+    
+}
+
+
+
+
+
+.barranav li{
+    list-style: none; /*quita la linea de la lista ul */
+    padding: 10px; 
+    font: bold 15px verdana;
+    display: inline-block; /*imprime en la misma linea*/
+    
+    
+    
+}
+
+
+
+.barranav li a{
+    text-decoration: none; /*quita la decoracion de la lista*/
+    padding: 6px;
+    color: white; 
+    border-right-style: solid; /*coloca un border a la derecha*/
+    
+    
+
+}
+
+
+.barranav li a:hover{
+    background-color: rgb(184, 191, 196);
+}
+
+#menuD{
+    position: absolute ;
+    left: 7%;
+    /* background: #d3cce3; */
+    width: 92%;
+    margin:  auto ;  /*tamaño con respecto al div*/
+    /* border: 1px solid gainsboro; */
+    display: block;
+    transition: all 700ms linear;
+        
+}
+#menuD.active{
+    left: 15%;
+}
+
+#sidebar {
+    position: absolute;
+    background: rgb(99, 212, 247);
+    width: 15%;
+    height: 92%;
+    /* border: 1px solid block */
+    display: block;
+    left: -8%;
+    transition: all 700ms linear;
+    
+}
+
+#sidebar.active{
+    left: 0;
+}
+
+#sidebar ul li {
+    text-align: center;
+    border-bottom: 1px solid rgba(100, 100, 100, .3);
+    padding: 15px 10px;
+    list-style: none;
+    
+    
+
+}
+#sidebar a{
+    list-style: none;
+    font: 15px verdana ;
+    color: rgba(8, 1, 1, 0.9);
+    text-decoration: none;
+}
+
+
+.toggle-btn span{
+    width: 40px;
+    display: block;
+    border: 1px solid rgb(12, 11, 11);
+    border-radius: 50% ;
+    background: rgb(238, 236, 236);
+    text-align: center ;
+    font-size: 30px;
+    
+}
+
+.toggle-btn span:hover{
+    background-color: rgb(224, 231, 231);
+
+}
+
+.toggle-btn {
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    cursor: pointer;
+    
+
+
+}
+
+
+
+#menu{
+    top: 30px;
+    height: 50px;
+    width: 100%;
+    background:rgb(6, 6, 14);
+   
+    }
+
+    footer{
+        text-align: center;
+        background: black;
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        height: 20px;
+        color: white;
+        
+            
+    }
+
+#grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 100px;
+    gap: 1em; 
+    
+}
+#grid > div{
+    background: #ecf0f1;
+    padding: 1em;
+}
+
+#grid > div:hover {
+    border: 1px solid #f1c40f;
+}
+
+
+body{
+    
+    
+    background: #D3CCE3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+     
+}
