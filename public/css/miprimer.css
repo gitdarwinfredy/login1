@@ -69,29 +69,40 @@ h4{
 }
 
 #menuD{
-    position: absolute ;
+    position: fixed ;
     left: 7%;
     /* background: #d3cce3; */
     width: 92%;
+    max-width: 92%;
     margin:  auto ;  /*tamaño con respecto al div*/
     /* border: 1px solid gainsboro; */
-    display: block;
+    display: inline-block ;
+    overflow-wrap: hidden;
     transition: all 700ms linear;
         
 }
 #menuD.active{
     left: 15%;
+    width: 82%;
+    max-width: 82%;
+    
 }
 
 #sidebar {
-    position: absolute;
-    background: rgb(99, 212, 247);
-    width: 15%;
+    position: fixed;
+    /* background: rgb(99, 212, 247, .8); */
+    background: #00416A;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #E4E5E6, #00416A);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #E4E5E6, #00416A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+    width: 12%;
     height: 92%;
     /* border: 1px solid block */
     display: block;
     left: -8%;
     transition: all 700ms linear;
+    
     
 }
 

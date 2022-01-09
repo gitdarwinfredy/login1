@@ -32,6 +32,9 @@ app.use(session({
 
 }));
 
+//8- Invocamos a la conexion de la base de datos
+const connection = require('./database/db');
+
 
 app.use('/', require('./router'));
 
@@ -40,4 +43,3 @@ app.listen(3000, (req, res)=>{
     console.log('SERVER RUNNIG EN http://localhost:3000');
 })
 
-// require('./public/css/miprimer');
