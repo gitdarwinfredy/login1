@@ -12,8 +12,8 @@ const dotenv = require('dotenv');
 dotenv.config({path:'./env/.env'});
 
 //4- Creamos el directorio public
-app.use(express.static('public'));
-app.use(express.static(__dirname + '/public'));
+app.use('/resources', express.static('public'));
+app.use('/resources', express.static(__dirname + '/public'));
 
 console.log(__dirname);
 
@@ -35,8 +35,15 @@ app.use(session({
 //8- Invocamos a la conexion de la base de datos
 const connection = require('./database/db');
 
+app.get('/', (req, res)=>{
+    res.render('index.ejs',{msg:'ESTOS ES UN MENSAJE DESDE NODE'});
+});
 
-app.use('/', require('./router'));
+app.get('/login',( req, res)=>{
+    res.render('login.ejs');
+});
+
+// app.use('/', require('./router'));
 
 
 app.listen(3000, (req, res)=>{
