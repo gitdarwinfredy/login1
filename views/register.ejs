@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./resources/css/style.css">
+</head>
+<body>
+
+    <div class="register-form">
+        <h1>Registration Form</h1>
+        <form action="/register" method= "POST">
+            <label for="user">User</label>
+            <input type="text" name= "user" required>
+
+            <label for="name">Full Name</label>
+            <input type="text" name= "name" required>
+
+            <select name="rol" id="rol" class="select-css">
+                <option value="admin" selected>Admin</option>
+                <option value="dataentry">Data Entry</option>
+            </select>
+
+            <label for="pass">Password</label>
+            <input type="password" name="pass" required>
+
+
+        <div style="display: inline;" >
+
+            <a href="/" class="btn-cancel">cancel</a><input type="submit" class="btn-save" value="Save">
+
+        </div>
+
+
+
+
+
+        </form>
+
+    </div>
+    
+</body>
+</html>

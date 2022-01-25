@@ -35,15 +35,37 @@ app.use(session({
 //8- Invocamos a la conexion de la base de datos
 const connection = require('./database/db');
 
-app.get('/', (req, res)=>{
-    res.render('index.ejs',{msg:'ESTOS ES UN MENSAJE DESDE NODE'});
-});
+//9- Estableciendo Rutas
 
-app.get('/login',( req, res)=>{
-    res.render('login.ejs');
-});
+    app.get('/', (req, res)=>{
+        res.render('index.ejs',{msg:'ESTOS ES UN MENSAJE DESDE NODE'});
+    });
 
-// app.use('/', require('./router'));
+    app.get('/login',( req, res)=>{
+        res.render('login.ejs');
+    });
+
+    app.get('/register',(req, res)=>{
+        res.render('register.ejs');
+    });
+
+//10- registracion
+app.post('/register', async (req ,res)=>{
+    const user = req.body.user;
+    const name = req.body.name;
+    const rol = req.body.rol;
+    const pass = req.body.pass;
+    let passwordHaash = await bcryptjs.hash(pass, 8);
+    connection.query('INSERT INTO users SET ?',{user:user, name:name, rol:rol, pass:passwordHaash}, async (error, results)=>{
+                        if(error){
+                            console.log('El error es'+error);
+                        }else{
+                            res.send('CONEXION EXITOSA')
+                        }
+                    })
+
+})
+
 
 
 app.listen(3000, (req, res)=>{
