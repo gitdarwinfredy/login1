@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+    
+</head>
+<body>
+
+    <% if (results) { %>
+    <div class="register-form2"> 
+        <h1>listen Form</h1><input type="button" value="Página anterior" onClick="history.go(-1);">
+        
+        <table class="tabla" >
+            <thead >
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">USUARIO</th>
+                    <th scope="col">NOMBRE</th>
+                    <th scope="col">ROL</th>
+                    <th scope="col">ACCIONES</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                <% results.forEach((user)=> { %>
+                    
+                    <tr>
+                        <td><%= user.id%></td>
+                        <td><%= user.user%></td>
+                        <td><%= user.name%></td>
+                        <td><%= user.rol%></td>
+                        <td>
+                            <a href="/edit/<%= user.user%>" class="btn-save" target="_self">Editar</a>
+                            <a href="/eliminar/<%= user.user%>" class="btn-save">Eliminar</a>
+
+                        </td>
+                    </tr>
+                
+                <% }) %>
+            </tbody>
+        </table>
+        
+        
+        
+
+    </div>
+
+    <% } %>
+    <%= data%>
+    
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+      <% if(typeof alert != "undefined") { %>
+        
+        <script>
+            Swal.fire({
+                title: '<%= alertTitle %>' ,
+                text: '<%= alertMessage %>',
+                icon: '<%= alertIcon %>',
+                showConfirmButton: '<%= showConfirmButton %>'
+                }).then(()=>{
+                timer= '<%= timer %>'
+                window.location= '/<%= ruta %>'
+            })
+
+        </script>   
+          
+
+          <% }  %>
+
+       
+
+
+   
+</body>
+</html>

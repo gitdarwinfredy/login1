@@ -10,27 +10,26 @@
     
 </head>
 <body>
-
     <div class="register-form">
         <h1>Registration Form</h1>
-        <form action="/register"  method= "POST">
+        <form action="/update"  method= "POST">
 
-            
+            <input type="number" name= "id" hidden >
 
             <label for="user">User</label>
-            <input type="text" name= "user" required>
+            <input type="text" name= "user" value="<%= results.user%>" required>
 
             <label for="name">Full Name</label>
-            <input type="text" name= "name" required>
+            <input type="text" name= "name" value="<%= results.name%>" required>
 
             <select name="rol" id="rol" class="select-css">
-                <option value="admin" selected>Admin</option>
-                <option value="dataentry">Data Entry</option>
-                <option value="superusuario">Super Usuario</option>
+                <option <%= results.rol == 'admin' ? 'selected' : '' %> value="admin" >Admin</option>
+                <option <%= results.rol == 'dataentry' ? 'selected' : '' %> value="dataentry">Data Entry</option>
+                <option <%= results.rol == 'superusuario' ? 'selected' : ''  %> value="superusuario">Super Usuario</option>
             </select>
 
             <label for="pass">Password</label>
-            <input type="password" name="pass" required>
+            <input type="password" name="pass" >
 
 
         <div style="display: inline;" >

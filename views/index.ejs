@@ -1,15 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./resources/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
-    <h1>Pagina de inicio</h1>
-    <h2>El usuario conectado es: <%= msg%></h2>
+
+    
+
+    
+    <% if (login) { %>
+        
+    <h1>El usuario conectado es <strong><%= name%></strong> y es usuario <%= rol%> </h1>
+        <a href="/logout"  class="a-logout">Logout</a>
+
+        
+    <% }else { %>
+        <h1><strong><%= name%></strong></h1>
+        <a href="/login" class="a-login">login</a>
+
+    <% } %>
+
+    <% switch (rol) {
+        case 'admin' : %>
+        <a href="/register" class="a-logout">register</a>
+        <a href="/consulta" class="a-logout">consultar</a>
+        <a href="/editar" class="a-logout">Editar</a>
+        <a href="/editarB" class="a-logout">Editar</a>
+                <% break;
+        case 'superusuario' : %>
+        <a href="/register" class="a-logout">register</a>
+                <% break;
+        
+               
+                
+        
+        } %>
+    
+
+    
+    
 
 </body>
 </html>

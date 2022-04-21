@@ -113,14 +113,14 @@ body{
 
 /* Estilos boton CANCELAR*/
 .btn-cancel{
-  width: 50%;
+  width: 45%;
   padding: 15px;
-  background-color: #9CA3AF;
-  border: 0;
+  background-color: #03021f;
+  border-left: 10px solid blue ;
   box-sizing: border-box;
   cursor: pointer;
   font-weight: bold;
-  font-size:medium;
+  font-size: 20px;
   color: #ffffff;
   text-align: center;
   margin-top: 20px;
@@ -142,21 +142,23 @@ body{
 
 /* Estilos boton GUARDAR*/
 .btn-save{
-  width: 50%;
+  width: 45%;
   padding: 15px;
   background-color: #1D4ED8;
-  border: 0;
+  border-left: 10px solid blue ;
   box-sizing: border-box;
   cursor: pointer;
-  font-weight: bold;
-  font-size:medium;
+  font-weight: verdana;
+  font-size: 18px;
   color: #ffffff;
+  text-align: center;
   margin-top: 20px;
   /* Para dar la apariencia de un boton */
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   text-decoration: none;  
+  
 }
 .btn-save:hover,.btn-save:active{
   color:#fff;
@@ -168,8 +170,50 @@ body{
 }
 
 /* form User Registration */
+.register-form2{
+  /* background-color: rgba(214, 218, 214, 0.774); */
+  background-color: rgba(0, 0, 0, 0.452);
+  position: relative;
+  top: 35px;
+  left: 35px;
+  color: white;
+  width: 90%;
+  
+  font-size: 20px;
+  line-height: 0.3em;
+  margin: 5em auto;
+  padding: 10px 20px 130px 50px;
+  margin-top: 55px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  
+  text-align: left !important;
+ box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22); 
+}
+
+.register-form2:hover{
+  /* background-color: rgba(214, 218, 214, 0.507); */
+  background-color: black;
+  
+}
+.tabla th ,td   {
+  border: 1px solid rgb(24, 8, 248);
+  text-align: center;
+  padding: 20px 20px 30px 30px;
+  display: table-cell;
+}
+
+.tabla th:hover ,td:hover{
+ color: red;
+ border: 1px solid rgb(136, 248, 8);
+ background-color: rgba(219, 216, 216, 0.829);
+ border-radius: 50%;
+}
+  
+
+
 .register-form{
   width: 400px;
+  font-size: 20px;
+  font-weight: bold;
   margin: 5em auto;
   padding: 0px 20px 60px 20px;
   margin-top: 35px;
@@ -187,6 +231,7 @@ body{
 .register-form input[type="password"],
 .register-form input[type="text"] {
   width: 100%;
+  font-size: 20px;
   padding: 15px;
   border: 1px solid #ced4da;
   margin-bottom: 10px;
