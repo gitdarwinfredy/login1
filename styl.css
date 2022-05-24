@@ -1,0 +1,45 @@
+
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 50px;
+}
+
+.gallery__item{
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 60px;
+    background: red;
+    
+}
+
+.yellow{
+    background: yellow;
+}
+
+.caja{
+    width: 100px;
+    height: 100px;
+    background: yellow;
+    border: 10px solid black;
+}
+
+.green{
+ background: green ;
+}
+
+.red{
+    background: red;
+}
+
+#boton{
+    width: 180px;
+    height: 30px;
+    font-size: 20px;
+    cursor: pointer;
+    /* font-variant: small-caps; */
+    /* font-weight:  900; */
+}

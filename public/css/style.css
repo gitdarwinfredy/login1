@@ -5,6 +5,21 @@ body{
   text-align: center;
 }
 
+#global {
+	height: 600px;
+	width: 800px;
+	border: 1px solid #ddd;
+	background: #f1f1f1;
+	overflow-y: scroll;
+}
+#mensajes {
+	height: auto;
+}
+.texto {
+	padding:4px;
+	background:#fff;
+}
+
 /* Login form */
 .login-form, .contenedor {
   width: 300px;
@@ -194,6 +209,7 @@ body{
   background-color: black;
   
 }
+/* 
 .tabla th ,td   {
   border: 1px solid rgb(24, 8, 248);
   text-align: center;
@@ -206,7 +222,7 @@ body{
  border: 1px solid rgb(136, 248, 8);
  background-color: rgba(219, 216, 216, 0.829);
  border-radius: 50%;
-}
+} */
   
 
 

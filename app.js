@@ -71,6 +71,20 @@ const connection = require('./database/db');
         })
      });
 
+     app.get('/entries',( req, res)=>{
+        connection.query('SELECT * FROM users' , async(error,results) =>{
+            if(error){
+                throw error;
+            }else{
+                data = JSON.stringify(results);
+                 res.render('entriesDataTables.ejs',{
+                    results: results,
+                    data
+                });
+            } 
+        })
+     });
+
      app.get('/editarB1',( req, res)=>{
         connection.query('SELECT * FROM users limit 10 ' , async(error,results) =>{
             if(error){
