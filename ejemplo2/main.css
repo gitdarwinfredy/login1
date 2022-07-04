@@ -8,8 +8,46 @@ body {
 #menu li > a {
 font-size: 18px;
 font-weight: bold;
-color: #3f3f3f;
-background-color: gainsboro;
+color: red;
+
+
+}
+
+/* .union{ */
+    /* display: flex; */
+    /* flex-wrap: wrap !important; */
+    /* width: 100%; */
+/* } */
+
+.span{
+    margin-top: 0;
+    background-color: rgb(255, 37, 37);
+    text-align: justify;
+    padding-bottom: 15px;
+    border-end-start-radius: 30px;
+    border-end-end-radius: 30px;
+}
+
+.boton{
+    
+    border-bottom: 0.5px solid rgba(226, 222, 222, 0.511) !important;
+     
+    
+    
+}
+
+/* .boton:hover{ */
+    /* border-bottom: 2px solid black !important; */
+    /* transition: border 2s; */
+/* } */
+
+.cuadroTexto {
+    outline: none;
+    border: none;
+}
+
+.cuadroTexto:hover {
+    border-bottom: 2px solid black;
 }
 
 #menu form > button {
@@ -19,12 +57,31 @@ background-color: gainsboro;
 
 .carousel-inner{
     max-height: 29rem;
+    
 }
 
 /* para pantallas paqueñas*/
 @media (max-width:768px) {
-    #intro{
+    #intro, #equipo{
         width: 90% !important;
     }
     
+    .servicio-fila{
+        width: 100% !important;
+        text-align: center;
+    }
+    
+}
+
+
+/* icono wrap imagen queda arriba text abajo*/
+@media (max-width:576px){
+    .icono-wrap{
+        flex-wrap: wrap;
+        justify-content: center !important;
+
+    }
+    #equipo{
+        display:none;
+    }
 }
